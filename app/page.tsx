@@ -69,8 +69,7 @@ const HomePage = (props: Props) => {
     initModel();
   }, [])
 
-  // loads model 
-  // set it in a state varaible
+  
   async function initModel() {
     const loadedModel: ObjectDetection = await cocossd.load({
       base: 'mobilenet_v2'
@@ -121,23 +120,23 @@ const HomePage = (props: Props) => {
   return (
 
     <div className='flex h-screen'>
-      {/* Left division - webcam and Canvas  */}
+   
       <div className='relative'>
         <div className='relative h-screen w-full'>
-     {/* <Webcam ref={webcamRef}
+     <Webcam ref={webcamRef}
             mirrored={mirrored}
             className='h-full w-full object-contain p-2'
-          /> */}
+          />
           <canvas ref={canvasRef}
             className='absolute top-0 left-0 h-full w-full object-contain'
           ></canvas>
         </div>
       </div>
 
-      {/* Righ division - container for buttion panel and wiki secion  */}
+ 
       <div className='flex flex-row flex-1'>
         <div className='border-primary/5 border-2 max-w-xs flex flex-col gap-2 justify-between shadow-md rounded-md p-4'>
-          {/* top secion  */}
+      
           <div className='flex flex-col gap-2'>
             <ModeToggle />
             <Button
@@ -150,7 +149,7 @@ const HomePage = (props: Props) => {
             <Separator className='my-2' />
           </div>
 
-          {/* Middle section  */}
+         
           <div className='flex flex-col gap-2'>
             <Separator className='my-2' />
             <Button
@@ -175,7 +174,7 @@ const HomePage = (props: Props) => {
 
             </Button>
           </div>
-          {/* Bottom Secion  */}
+     
           <div className='flex flex-col gap-2'>
             <Separator className='my-2' />
 
