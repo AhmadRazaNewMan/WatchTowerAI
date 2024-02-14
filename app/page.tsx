@@ -124,10 +124,10 @@ const HomePage = (props: Props) => {
       {/* Left division - webcam and Canvas  */}
       <div className='relative'>
         <div className='relative h-screen w-full'>
-          <Webcam ref={webcamRef}
+     {/* <Webcam ref={webcamRef}
             mirrored={mirrored}
             className='h-full w-full object-contain p-2'
-          />
+          /> */}
           <canvas ref={canvasRef}
             className='absolute top-0 left-0 h-full w-full object-contain'
           ></canvas>
